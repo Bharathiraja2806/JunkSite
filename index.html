@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f6f7fb;
+        scroll-behavior: smooth;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Hero Section */
+      #hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=80")
+            center/cover no-repeat;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      #hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      #hero p {
+        font-size: 1.3rem;
+        opacity: 0.9;
+      }
+      .btn-custom {
+        padding: 10px 30px;
+        border-radius: 50px;
+        background: #6c63ff;
+        color: white;
+        transition: 0.2s;
+      }
+      .btn-custom:hover {
+        background: #4b45d2;
+        transform: translateY(-3px);
+      }
+
+      /* Section Titles */
+      .section-title {
+        font-weight: 700;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+
+      /* Services */
+      .service-box {
+        padding: 30px;
+        border-radius: 20px;
+        transition: 0.3s;
+        background: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      .service-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Projects */
+      .project-card img {
+        border-radius: 10px;
+        width: 100%;
+      }
+      .project-card {
+        transition: 0.3s;
+      }
+      .project-card:hover {
+        transform: translateY(-8px);
+      }
+
+      /* Footer */
+      footer {
+        padding: 20px;
+        background: #111;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">MyPortfolio</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div data-aos="fade-up">
+        <h1>Hello, I'm <span style="color: #6c63ff">Bharathi</span></h1>
+        <p>Web Developer | Software Developer | Freelancer</p>
+        <a href="#contact" class="btn btn-custom mt-3">Hire Me</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <img
+            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+            alt=""
+            class="img-fluid rounded-4"
+          />
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <h2 class="section-title">About Me</h2>
+          <p>
+            I am a passionate Web Developer & Software Developer with experience
+            in building dynamic websites, web applications, and custom software
+            solutions using modern technologies.
+          </p>
+          <p>
+            I create clean, scalable, and user-friendly products for clients
+            globally.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="section-title">My Services</h2>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="service-box">
+              <h4>Web Development</h4>
+              <p>
+                Responsive websites using HTML, CSS, JavaScript, Bootstrap,
+                React, Django, Flask.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-box">
+              <h4>Software Development</h4>
+              <p>
+                Desktop apps, automation scripts, APIs, backend development
+                using Python & frameworks.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-box">
+              <h4>Mobile App Integration</h4>
+              <p>
+                Flutter integrations, API development, data-driven mobile
+                solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container py-5">
+      <h2 class="section-title text-center">My Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="project-card">
+            <img src="https://source.unsplash.com/600x400/?website" />
+            <h5 class="mt-2">Web App Project</h5>
+            <p>Full-stack responsive website.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card">
+            <img src="https://source.unsplash.com/600x400/?coding" />
+            <h5 class="mt-2">Software Tool</h5>
+            <p>Automation & custom software solution.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card">
+            <img src="https://source.unsplash.com/600x400/?app" />
+            <h5 class="mt-2">Mobile App</h5>
+            <p>API-based mobile functionalities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="section-title">Contact Me</h2>
+        <p>📩 Email: bharathiv2806@gmail.com</p>
+        <p>📞 Phone: +91 9025062797</p>
+        <p>🌐 Portfolio: yourwebsite.com</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 My Portfolio | All Rights Reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
